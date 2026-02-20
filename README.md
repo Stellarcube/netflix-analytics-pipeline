@@ -35,7 +35,9 @@ This enables scalable data modeling, automated testing, lineage tracking, and do
 
 ## Architecture Overview
 
+
 <img width="2026" height="642" alt="Netflix diagram final" src="https://github.com/user-attachments/assets/20f7b389-4eab-4a98-83ec-c8a3695f6f91" />
+
 
 The project follows a modern ELT analytics engineering architecture.
 
