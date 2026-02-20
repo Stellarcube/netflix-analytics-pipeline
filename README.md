@@ -33,6 +33,24 @@ This enables scalable data modeling, automated testing, lineage tracking, and do
 
 ---
 
+## Architecture Overview
+
+
+<img width="2026" height="765" alt="Netflix diagram final" src="https://github.com/user-attachments/assets/09a3d9ca-7961-42b6-a8a0-7fd414520f89" />
+
+
+The project follows a modern ELT analytics engineering architecture.
+
+Raw Netflix datasets are first stored in Amazon S3, acting as the landing zone for immutable source data.
+Data is then ingested into Snowflake, where transformations are performed using dbt.
+
+The transformation layer standardizes raw data through staging and intermediate models before producing analytics-ready dimensional marts. Slowly Changing Dimension (SCD Type 2) logic is implemented using dbt snapshots to preserve historical changes.
+
+Data quality is enforced through automated dbt tests, while lineage and documentation provide transparency and maintainability.
+The final analytics marts enable dashboarding, ad-hoc analysis, and business reporting.
+
+---
+
 ## 📂 Project Structure
 
 ```
